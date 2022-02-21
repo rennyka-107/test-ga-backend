@@ -7,7 +7,7 @@ module.exports = {
     };
 
     console.log("GA4--------------------", req.body);
-    var GA4 = require("react-ga4").default;
+    var GA4 = require("react-ga").default;
     GA4.initialize(req.body.gaId);
     GA4.event({
       category: req.body.category,
