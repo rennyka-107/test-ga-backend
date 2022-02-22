@@ -1,4 +1,6 @@
 "use strict";
+var GA4 = require("react-ga4").default;
+GA4.initialize("G-85G9QPGZMB");
 
 module.exports = {
   track: (req, res) => {
@@ -7,8 +9,7 @@ module.exports = {
     };
 
     console.log("GA4--------------------", req.body);
-    var GA4 = require("react-ga4").default;
-    GA4.initialize(req.body.gaId);
+    
     GA4.event({
       category: req.body.category,
       action: req.body.action,
